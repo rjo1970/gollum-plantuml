@@ -1,4 +1,4 @@
-FROM ruby:latest
+FROM ruby:2.4.2
 
 ENV RACK_ENV production
 
