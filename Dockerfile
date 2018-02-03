@@ -1,4 +1,4 @@
-FROM ruby:2.4.2
+FROM ruby:2.5.0
 
 ENV RACK_ENV production
 
@@ -7,7 +7,7 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get remove bzr mercurial libmysqlclient-dev subversion \
                    libmysqlclient-dev libsqlite3-dev -y
 
-RUN apt-get install openjdk-7-jdk maven graphviz libicu-dev -y
+RUN apt-get install default-jdk maven graphviz libicu-dev -y
 
 RUN apt-get install haproxy -y
 

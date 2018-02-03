@@ -10,12 +10,12 @@ describe 'Dockerfile' do
     set :docker_image, image.id
   end
 
-  it 'is based on a Jessie Debian distribution' do
-    expect(os_version).to include('Debian GNU/Linux 8 (jessie)')
+  it 'is based on a Stretch Debian distribution' do
+    expect(os_version).to include('Debian GNU/Linux 9 (stretch)')
   end
 
   it 'has the expected version of Ruby installed' do
-    expect(ruby_version).to include('ruby 2.4')
+    expect(ruby_version).to include('ruby 2.5')
   end
 
   it 'has the rack environment set to production' do
@@ -31,7 +31,7 @@ describe 'Dockerfile' do
   end
 
   it 'requires plantUML build and run dependencies' do
-    expect(package("openjdk-7-jdk")).to be_installed
+    expect(package("default-jdk")).to be_installed
     expect(package("maven")).to be_installed
     expect(package("graphviz")).to be_installed
     expect(package("libicu-dev")).to be_installed
