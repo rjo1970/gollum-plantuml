@@ -73,7 +73,7 @@ describe 'Dockerfile' do
   end
 
   describe file('/etc/haproxy/haproxy.cfg') do
-    its(:sha256sum) { should eq '8e86809eb75eb67fba528b5873e4706a4273b66697f6f1826145518fd8058c98' }
+    its(:sha256sum) { should eq 'c8966593068d3f4d9fd68ff99284f5ca809007de4538eea80c8d9d98c84d9829' }
   end
 
   # HAProxy should be enabled
