@@ -1,0 +1,11 @@
+version: '3'
+services:
+  gollum:
+    container_name: gollum_plantuml
+    build:
+      context: .
+    image: gollum:latest
+    volumes:
+      - .:/gollum
+    ports:
+      - '4567:4567'
